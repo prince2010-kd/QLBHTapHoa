@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChiTietActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bar_chi_tiet"
+        app:title="Chi tiết sản phẩm"
+        android:background="#FF6600"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <FrameLayout
+            android:id="@+id/far_chi_tiet"
+            android:layout_marginRight="16dp"
+            android:layout_width="55dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="right">
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/menu_sl"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="top|right"
+                app:nbMaxTextLength="2"/>
+                <ImageView
+                    android:src="@drawable/ic_shopping_cart_24"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    />
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/li_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/bar_chi_tiet">
+        <ImageView
+            android:id="@+id/hinh_anh_chi_tiet"
+            android:src="@drawable/iconnew_w512"
+            android:layout_width="100dp"
+            android:layout_height="150dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txt_ten_sp_chi_tiet"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Tên sản phẩm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txt_gia_sp"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:text="Giá:  7000đ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spin"
+                android:backgroundTint="#EEEEEE"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btl_them"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#33CCFF"
+                android:text="Thêm vào giỏ hàng"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/li_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:text="Mô tả"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt_mo_ta_chi_tiet"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

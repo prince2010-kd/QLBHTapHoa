@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DangNhapActivity"
+    android:background="#FFCCCC">
+    <TextView
+        android:id="@+id/txt_dang_nhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#FF3300"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_dang_nhap"
+        android:id="@+id/line1"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_dang_nhap_mail"
+            android:hint="Email"
+            android:textColor="#000000"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_mail_outline_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        android:id="@+id/line2"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_dang_nhap_pass"
+            android:hint="Pass"
+            android:textColor="#000000"
+            android:inputType="textPassword"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_key_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btl_dang_nhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:text="Đăng nhập"
+        android:layout_marginTop="15dp"
+        />
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/btl_dang_nhap"
+        android:id="@+id/layout_dang_ki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn chưa có tài khoản?"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/txt_dang_ki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            android:textColor="#FF0000"
+            android:text="Đăng kí"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_quen_mat_khau"
+        app:layout_constraintTop_toBottomOf="@id/layout_dang_ki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quên mật khẩu?"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

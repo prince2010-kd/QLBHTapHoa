@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_notifi"
+        android:src="@drawable/ic_phone_android_24"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="center"
+        ></ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/title_noti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thông báo"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/body_noti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>
